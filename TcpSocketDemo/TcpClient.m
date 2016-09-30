@@ -34,6 +34,9 @@
     uint16_t port = [sock connectedPort];
     NSString *str = [[NSString alloc] initWithData:data encoding:DEF_STR_ENCODING];
     NSLog(@"client didReadData [%@:%d] %@", ip, port, str);
+    if (self.clientComplection) {
+        self.clientComplection(str);
+    }
 }
 
 -(void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag {

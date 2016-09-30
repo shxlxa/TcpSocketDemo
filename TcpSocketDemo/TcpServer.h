@@ -10,12 +10,17 @@
 #import "GCDAsyncSocket.h"
 #import "ConnectionDef.h"
 
+typedef void(^ServerComplection)(NSString *);
+
+
 @interface TcpServer : NSObject  <GCDAsyncSocketDelegate> {
     GCDAsyncSocket *serverSocket;
     NSMutableArray *clientArray;
     long readTag;
     long writeTag;
 }
+
+@property (nonatomic, copy)   ServerComplection  serverComplection;
 
 -(long)getReadTag;
 -(long)getWriteTag;

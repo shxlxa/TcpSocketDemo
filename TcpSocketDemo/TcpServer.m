@@ -43,6 +43,9 @@
     NSLog(@"server didReadData [%@:%d] %@", ip, port, str);
     //再次接收数据，因为这个方法只接收一次
     [sock readDataWithTimeout:READ_TIMEOUT tag:[self getReadTag]];
+    if (self.serverComplection) {
+        self.serverComplection(str);
+    }
 }
 
 -(void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag {

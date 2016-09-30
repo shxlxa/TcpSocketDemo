@@ -20,6 +20,8 @@
 @property (strong, nonatomic) IBOutlet UIView *serverSendButton;
 @property (weak, nonatomic) IBOutlet UITextField *clientSendTextField;
 @property (weak, nonatomic) IBOutlet UIButton *clientSendButton;
+
+
 - (IBAction)serverSendButtonClick:(id)sender;
 - (IBAction)clientSendButtonClick:(id)sender;
 

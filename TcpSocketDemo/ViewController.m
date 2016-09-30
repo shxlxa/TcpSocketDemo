@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *labelServer;
+@property (weak, nonatomic) IBOutlet UILabel *labelClient;
 
 @end
 
@@ -23,6 +25,20 @@
     [_tcpServer createTcpSocket:SERVER_QUEUE acceptOnPort:SERVER_PORT];
     
     [_tcpClient createTcpSocket:CLIENT_QUEUE connectToHost:SERVER_ADDRESS onPort:SERVER_PORT];
+    
+    __weak typeof(self)  weakSelf = self;
+     _tcpServer.serverComplection=^(NSString *receiveStr){
+         dispatch_async(dispatch_get_main_queue(), ^{
+             weakSelf.labelServer.text = receiveStr;
+         });
+    };
+    
+    _tcpClient.clientComplection = ^(NSString *receiveStr){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            weakSelf.labelClient.text = receiveStr;
+        });
+    };
+    
 }
 
 - (IBAction)serverSendButtonClick:(id)sender {

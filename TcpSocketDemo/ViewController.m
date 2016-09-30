@@ -21,12 +21,8 @@
     _tcpServer = [[TcpServer alloc] init];
     _tcpClient = [[TcpClient alloc] init];
     [_tcpServer createTcpSocket:SERVER_QUEUE acceptOnPort:SERVER_PORT];
+    
     [_tcpClient createTcpSocket:CLIENT_QUEUE connectToHost:SERVER_ADDRESS onPort:SERVER_PORT];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)serverSendButtonClick:(id)sender {

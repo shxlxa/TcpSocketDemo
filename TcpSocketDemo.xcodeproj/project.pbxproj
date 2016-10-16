@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045E4A4A1DB3C6630081C851 /* imageJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 045E4A491DB3C6630081C851 /* imageJson.json */; };
 		21F703CE1D9D2F8300FDFE4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F703CD1D9D2F8300FDFE4F /* main.m */; };
 		21F703D11D9D2F8300FDFE4F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F703D01D9D2F8300FDFE4F /* AppDelegate.m */; };
 		21F703D41D9D2F8300FDFE4F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F703D31D9D2F8300FDFE4F /* ViewController.m */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		045E4A491DB3C6630081C851 /* imageJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = imageJson.json; sourceTree = "<group>"; };
 		21F703C91D9D2F8300FDFE4F /* TcpSocketDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TcpSocketDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F703CD1D9D2F8300FDFE4F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21F703CF1D9D2F8300FDFE4F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		21F703CB1D9D2F8300FDFE4F /* TcpSocketDemo */ = {
 			isa = PBXGroup;
 			children = (
+				045E4A491DB3C6630081C851 /* imageJson.json */,
 				21F704061D9D306F00FDFE4F /* GCDAsyncSocket.h */,
 				21F704071D9D306F00FDFE4F /* GCDAsyncSocket.m */,
 				21F703CF1D9D2F8300FDFE4F /* AppDelegate.h */,
@@ -269,6 +272,7 @@
 				21F703DC1D9D2F8300FDFE4F /* LaunchScreen.storyboard in Resources */,
 				21F703D91D9D2F8300FDFE4F /* Assets.xcassets in Resources */,
 				21F703D71D9D2F8300FDFE4F /* Main.storyboard in Resources */,
+				045E4A4A1DB3C6630081C851 /* imageJson.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +540,7 @@
 				21F703F81D9D2F8400FDFE4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21F703F91D9D2F8400FDFE4F /* Build configuration list for PBXNativeTarget "TcpSocketDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +549,7 @@
 				21F703FB1D9D2F8400FDFE4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21F703FC1D9D2F8400FDFE4F /* Build configuration list for PBXNativeTarget "TcpSocketDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +558,7 @@
 				21F703FE1D9D2F8400FDFE4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

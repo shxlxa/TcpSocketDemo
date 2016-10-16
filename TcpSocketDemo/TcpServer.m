@@ -56,7 +56,10 @@
 
 -(void)socket:(GCDAsyncSocket *)sock writeString:(NSString *)str withTag:(long)tag {
     NSData *data = [str dataUsingEncoding:DEF_STR_ENCODING];
-    [sock writeData:data withTimeout:WRITE_TIMEOUT tag:[self getWriteTag]];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"imageJson" ofType:@"json"];
+    NSData *jsonData = [[NSData alloc] initWithContentsOfFile:path];
+    [sock writeData:jsonData withTimeout:WRITE_TIMEOUT tag:[self getWriteTag]];
 }
 
 -(void)broadcastStr:(NSString *)str {

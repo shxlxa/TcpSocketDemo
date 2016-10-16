@@ -20,6 +20,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+   id result = [self getJsonDataJsonname:nil];
+    
     _tcpServer = [[TcpServer alloc] init];
     _tcpClient = [[TcpClient alloc] init];
     [_tcpServer createTcpSocket:SERVER_QUEUE acceptOnPort:SERVER_PORT];
@@ -39,6 +41,20 @@
         });
     };
     
+}
+
+- (id)getJsonDataJsonname:(NSString *)jsonname
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"imageJson" ofType:@"json"];
+    NSData *jsonData = [[NSData alloc] initWithContentsOfFile:path];
+    NSError *error;
+    id jsonObj = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+    if (!jsonData || error) {
+        //DLog(@"JSON解码失败");
+        return nil;
+    } else {
+        return jsonObj;
+    }
 }
 
 - (IBAction)serverSendButtonClick:(id)sender {
